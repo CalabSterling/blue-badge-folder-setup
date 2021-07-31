@@ -9,6 +9,7 @@ const validateSession = (req, res, next) => {
     } else {
         jwt.verify(token, process.env.JWT_SECRET, (err, decodeToken) => {
             console.log('decodeToken -->', decodeToken);
+            console.log(process.env.JWT_SECRET);
             if (!err && decodeToken) {
                 User.findOne({
                     where: {
@@ -20,7 +21,7 @@ const validateSession = (req, res, next) => {
                         if (!user) throw err;
                         console.log('req -->', req);
                         req.user = user;
-                        return next;
+                        return next();
                     })
                     .catch(err => next(err));
             } else {
@@ -30,3 +31,5 @@ const validateSession = (req, res, next) => {
         });
     }
 };
+
+module.exports = validateSession;
