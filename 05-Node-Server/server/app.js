@@ -9,7 +9,6 @@ let log = require('./controllers/logController');
 
 sequelize.sync();
 app.use(require('./middleware/headers'));
-app.use(require('./middleware/validate-session'))
 
 app.use(express.json());
 

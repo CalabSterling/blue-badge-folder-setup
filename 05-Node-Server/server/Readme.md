@@ -1,20 +1,13 @@
-User Created
-C:\Users\calab\Downloads\BLueBadgeFolderStructure\blue-badge-folder-setup\05-Node-Server\server\EndPoint Test\UserCreated.PNG
+![User Created](./EndPoint/UserCreated.PNG)
 
-User Logged In
-C:\Users\calab\Downloads\BLueBadgeFolderStructure\blue-badge-folder-setup\05-Node-Server\server\EndPoint Test\UserLoggedIn.PNG
+![User Logged In](./EndPoint/UserLoggedIn.PNG)
 
-Log Entry Created
-C:\Users\calab\Downloads\BLueBadgeFolderStructure\blue-badge-folder-setup\05-Node-Server\server\EndPoint Test\LogCreated.PNG
+![Log Entry Created](./EndPoint/LogCreated.PNG)
 
-Log Entry Returned
-C:\Users\calab\Downloads\BLueBadgeFolderStructure\blue-badge-folder-setup\05-Node-Server\server\EndPoint Test\LogReturnedById.PNG
+![Log Entry Returned](./EndPoint/LogsReturnedByUser.PNG)
 
-Log Entry Returned by Id
-C:\Users\calab\Downloads\BLueBadgeFolderStructure\blue-badge-folder-setup\05-Node-Server\server\EndPoint Test\LogReturnedById.PNG
+![Log Entry Returned by Id](./EndPoint/LogReturnedById.PNG)
 
-Log Entry Updated
-C:\Users\calab\Downloads\BLueBadgeFolderStructure\blue-badge-folder-setup\05-Node-Server\server\EndPoint Test\LogUpdated.PNG
+![Log Entry Updated](./EndPoint/LogUpdated.PNG)
 
-Log Deleted
-C:\Users\calab\Downloads\BLueBadgeFolderStructure\blue-badge-folder-setup\05-Node-Server\server\EndPoint Test\LogDeleted.PNG
+![Log Deleted](./EndPoint/LogDeleted.PNG)
