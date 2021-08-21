@@ -1,22 +1,13 @@
-# Workout Server
+![User Created](./EndPoint/UserCreated.PNG)
 
-If you are getting started on this project We would recommend the following
+![User Logged In](./EndPoint/UserLoggedIn.PNG)
 
-## Create your folders
+![Log Entry Created](./EndPoint/LogCreated.PNG)
 
-- Middleware
-- Controllers
-- Models
+![Log Entry Returned](./EndPoint/LogsReturnedByUser.PNG)
 
-## Create files
+![Log Entry Returned by Id](./EndPoint/LogReturnedById.PNG)
 
-- app.js
-- db.js
-- .env
-- .gitignore
+![Log Entry Updated](./EndPoint/LogUpdated.PNG)
 
-## Build As needed
-
-- user controller
-- log controller
-- validate session
+![Log Deleted](./EndPoint/LogDeleted.PNG)
