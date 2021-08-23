@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
 const PropsDemo = () => {
     const [ color, setColor] = useState('white');
@@ -34,6 +35,18 @@ const PropsDemo = () => {
     const toggleBorderStyle = () => {
         borderStyle === 'dashed' ? setBorderStyle('double') : setBorderStyle('dashed');
     };
+    
+    const toggleDisplay = () => {
+        display === 'inline-block' ? setDisplay('flow-root') : setDisplay('inline-block');
+    };
+
+    const toggleWidth = () => {
+        width === '350px' ? setWidth('500px') : setWidth('350px');
+    };
+
+    const toggleTextAlign = () => {
+        textAlign === 'center' ? setTextAlign('justify') : setTextAlign('center');
+    };
 
     return (
         <div className="main">
@@ -43,6 +56,9 @@ const PropsDemo = () => {
                 <FunctionalComponent string="Change background color" function={toggleBackgroundColor} selectedStyle={backgroundColor}/>
                 <FunctionalComponent string="Change border radius" function={toggleBorderRadius} selectedStyle={borderRadius}/>
                 <FunctionalComponent string="Change border style" function={toggleBorderStyle} selectedStyle={borderStyle}/>
+                <FunctionalComponent string="Change the display" function={toggleDisplay} selectedStyle={display}/>
+                <FunctionalComponent string="Change the width" function={toggleWidth} selectedStyle={width}/>
+                <FunctionalComponent string="Change the text alignment" function={toggleTextAlign} selectedStyle={textAlign}/>
                 </div>
             </div>
         </div>
@@ -67,4 +83,16 @@ const TinyComponent = (props) => {
             <p>The current style is: {props.selectedStyle}</p>
         </div>
     )
+}
+
+FunctionalComponent.defaultProps = {
+    string: 'This is wild!',
+    function: ()=> console.log('Can i see this in my dev tools?'),
+    selectedStyle: 'what style??'
+}
+
+FunctionalComponent.propTypes = {
+    string: PropTypes.string.isRequired,
+    function: PropTypes.func.isRequired,
+    selectedStyle : PropTypes.string.isRequired
 }

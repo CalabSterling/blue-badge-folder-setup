@@ -31,7 +31,7 @@ function StateExample() {
             <input value={text} onChange={e => setText(e.target.value)} />
             <p style={{color: colorchange}} onMouseEnter={e => setcolorchange('red')} onMouseLeave={e => setcolorchange('blue')}>Just to show text changing color</p>
             <br />
-            <img style={{width: '100px', height: '100px'}}
+            <img style={{width: '100px', height: '100px'}} alt="this is something"
             src="https://upload.wikimedia.org/wikipedia/commons/1/13/Facebook_like_thumb.png" onClick={e => setLikeNum(likeNum + 1)}/>
             <span>{likeNum}</span>
         </div>

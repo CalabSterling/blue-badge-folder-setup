@@ -5,7 +5,7 @@
 /*body*/
 body {
   padding: 15px;
-  color: white;
+  background-color: white;
   font: Belleza;
 }
 
@@ -54,12 +54,12 @@ ul {
   color: white;
 }
 
-sidebar-list a{
+.sidebar-list a{
   color: white;
   padding: 0;
 }
 
-sidebar-route{
+.sidebar-route{
   flex: 1;
   padding: '00px';
 }
