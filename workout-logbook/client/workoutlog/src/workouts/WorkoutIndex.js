@@ -5,9 +5,26 @@ import {
     Col
 } from 'reactstrap';
 import WorkoutCreate from './WorkoutCreate';
+import WorkoutTable from './WorkoutTable';
+import WorkoutEdit from './WorkoutEdit';
 
 const WorkoutIndex = (props) => {
     const [workouts, setWorkouts] = useState([]);
+    const [updateActive, setUpdateActive] = useState(false);
+    const [workoutToUpdate, setworkoutToUpdate] = useState([]);
+
+    const editUpdateWorkout = (workout) => {
+        setworkoutToUpdate(workout);
+        console.log(workout)
+    }
+
+    const updateOn = () => {
+        setUpdateActive(true);
+    }
+
+    const updateOff = () => {
+        setUpdateActive(false);
+    }
 
     const fetchWorkouts = () => {
         fetch("http://localhost:3000/log", {
@@ -34,8 +51,9 @@ const WorkoutIndex = (props) => {
                     <WorkoutCreate fetchWorkouts={fetchWorkouts} token={props.token}/>
                 </Col>
                 <Col md="9">
-                    <h2>Log a workout to see a table. This will be added in later pages.</h2>
+                    <h2><WorkoutTable workouts={workouts} editUpdateWorkout={editUpdateWorkout} updateOn={updateOn} fetchWorkouts={fetchWorkouts} token={props.token} /></h2>
                 </Col>
+                {updateActive ? <WorkoutEdit workoutToUpdate={workoutToUpdate} updateOff={updateOff} token={props.token} fetchWorkouts={fetchWorkouts}/> : <></>}
             </Row>
         </Container>
      );
